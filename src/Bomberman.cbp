@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Bomberman" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Bomberman-debug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="./" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add directory="$(SDL_install_dir)/SDL2-2.0.4/i686-w64-mingw32/include/SDL2" />
+					<Add directory="$(SDL_install_dir)/SDL2_image-2.0.1/i686-w64-mingw32/include/SDL2" />
+					<Add directory="$(SDL_install_dir)/SDL2_mixer-2.0.1/i686-w64-mingw32/include/SDL2" />
+					<Add directory="$(SDL_install_dir)/SDL2_ttf-2.0.14/i686-w64-mingw32/include/SDL2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf" />
+					<Add directory="$(SDL_install_dir)/SDL2-2.0.4/i686-w64-mingw32/lib" />
+					<Add directory="$(SDL_install_dir)/SDL2_image-2.0.1/i686-w64-mingw32/lib" />
+					<Add directory="$(SDL_install_dir)/SDL2_mixer-2.0.1/i686-w64-mingw32/lib" />
+					<Add directory="$(SDL_install_dir)/SDL2_ttf-2.0.14/i686-w64-mingw32/lib" />
+				</Linker>
+				<Environment>
+					<Variable name="SDL_install_dir" value="C:\SDL" />
+				</Environment>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Bomberman-release" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="./" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(SDL_install_dir)/SDL2-2.0.4/i686-w64-mingw32/include/SDL2" />
+					<Add directory="$(SDL_install_dir)/SDL2_image-2.0.1/i686-w64-mingw32/include/SDL2" />
+					<Add directory="$(SDL_install_dir)/SDL2_mixer-2.0.1/i686-w64-mingw32/include/SDL2" />
+					<Add directory="$(SDL_install_dir)/SDL2_ttf-2.0.14/i686-w64-mingw32/include/SDL2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf" />
+					<Add directory="$(SDL_install_dir)/SDL2-2.0.4/i686-w64-mingw32/lib" />
+					<Add directory="$(SDL_install_dir)/SDL2_image-2.0.1/i686-w64-mingw32/lib" />
+					<Add directory="$(SDL_install_dir)/SDL2_mixer-2.0.1/i686-w64-mingw32/lib" />
+					<Add directory="$(SDL_install_dir)/SDL2_ttf-2.0.14/i686-w64-mingw32/lib" />
+				</Linker>
+				<Environment>
+					<Variable name="SDL_install_dir" value="C:\SDL" />
+				</Environment>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Makefile" />
+		<Unit filename="game.cpp" />
+		<Unit filename="game.h" />
+		<Unit filename="game_cleanup.cpp" />
+		<Unit filename="game_loadcontent.cpp" />
+		<Unit filename="game_onevent.cpp" />
+		<Unit filename="game_oninit.cpp" />
+		<Unit filename="game_onloop.cpp" />
+		<Unit filename="game_onrender.cpp" />
+		<Unit filename="include/Constants/PickUpConstants.h" />
+		<Unit filename="include/Constants/PlayerConstants.h" />
+		<Unit filename="include/Constants/ResourcesConstants.h" />
+		<Unit filename="include/Constants/TextureBombConstants.h" />
+		<Unit filename="include/Constants/TextureEnemyConstants.h" />
+		<Unit filename="include/Constants/TextureExplosionConstants.h" />
+		<Unit filename="include/Constants/TextureMapObjectConstants.h" />
+		<Unit filename="include/Constants/TexturePickUpConstants.h" />
+		<Unit filename="include/Constants/TexturePlayerConstants.h" />
+		<Unit filename="include/Constants/TextureScoreConstants.h" />
+		<Unit filename="include/Constants/WindowConstants.h" />
+		<Unit filename="include/Destroyer/Destroyer.h" />
+		<Unit filename="include/Destroyer/WallDestroyer.h" />
+		<Unit filename="include/Display/Display.h" />
+		<Unit filename="include/Display/DisplayElement.h" />
+		<Unit filename="include/Display/DisplayManager.h" />
+		<Unit filename="include/Display/ExitDisplay.h" />
+		<Unit filename="include/Display/GameDisplay.h" />
+		<Unit filename="include/Display/LoadingDisplay.h" />
+		<Unit filename="include/Display/MainMenuDisplay.h" />
+		<Unit filename="include/Display/PauseDisplay.h" />
+		<Unit filename="include/Display/PlayersNumberDisplay.h" />
+		<Unit filename="include/Display/WelcomeDisplay.h" />
+		<Unit filename="include/Entity/Bomb.h" />
+		<Unit filename="include/Entity/DestructibleWall.h" />
+		<Unit filename="include/Entity/Enemy.h" />
+		<Unit filename="include/Entity/EnemyOne.h" />
+		<Unit filename="include/Entity/EnemyThree.h" />
+		<Unit filename="include/Entity/EnemyTwo.h" />
+		<Unit filename="include/Entity/Explosion.h" />
+		<Unit filename="include/Entity/MapObject.h" />
+		<Unit filename="include/Entity/PickUp.h" />
+		<Unit filename="include/Entity/Player.h" />
+		<Unit filename="include/Manager/BombManager.h" />
+		<Unit filename="include/Manager/EnemyManager.h" />
+		<Unit filename="include/Manager/ExplosionManager.h" />
+		<Unit filename="include/Manager/Map.h" />
+		<Unit filename="include/Manager/PickUpManager.h" />
+		<Unit filename="include/Manager/PlayerManager.h" />
+		<Unit filename="include/System/FreeTimer.h" />
+		<Unit filename="include/System/KeyboardInput.h" />
+		<Unit filename="include/System/SystemTimer.h" />
+		<Unit filename="include/System/TextRenderer.h" />
+		<Unit filename="include/Utility/Relay.h" />
+		<Unit filename="include/Utility/Timer.h" />
+		<Unit filename="includes.h" />
+		<Unit filename="resources/Zabdilus.ttf" />
+		<Unit filename="resources/explosion.wav" />
+		<Unit filename="resources/game-play-normal.mp3" />
+		<Unit filename="resources/get-ready.mp3" />
+		<Unit filename="resources/levels/enemy1.txt" />
+		<Unit filename="resources/levels/enemy10.txt" />
+		<Unit filename="resources/levels/enemy2.txt" />
+		<Unit filename="resources/levels/enemy3.txt" />
+		<Unit filename="resources/levels/enemy4.txt" />
+		<Unit filename="resources/levels/enemy5.txt" />
+		<Unit filename="resources/levels/enemy6.txt" />
+		<Unit filename="resources/levels/enemy7.txt" />
+		<Unit filename="resources/levels/enemy8.txt" />
+		<Unit filename="resources/levels/enemy9.txt" />
+		<Unit filename="resources/levels/level0.txt" />
+		<Unit filename="resources/levels/level1.txt" />
+		<Unit filename="resources/levels/level10.txt" />
+		<Unit filename="resources/levels/level2.txt" />
+		<Unit filename="resources/levels/level3.txt" />
+		<Unit filename="resources/levels/level4.txt" />
+		<Unit filename="resources/levels/level5.txt" />
+		<Unit filename="resources/levels/level6.txt" />
+		<Unit filename="resources/levels/level7.txt" />
+		<Unit filename="resources/levels/level8.txt" />
+		<Unit filename="resources/levels/level9.txt" />
+		<Unit filename="resources/levels/player1.txt" />
+		<Unit filename="resources/levels/player10.txt" />
+		<Unit filename="resources/levels/player2.txt" />
+		<Unit filename="resources/levels/player3.txt" />
+		<Unit filename="resources/levels/player4.txt" />
+		<Unit filename="resources/levels/player5.txt" />
+		<Unit filename="resources/levels/player6.txt" />
+		<Unit filename="resources/levels/player7.txt" />
+		<Unit filename="resources/levels/player8.txt" />
+		<Unit filename="resources/levels/player9.txt" />
+		<Unit filename="resources/neck-snap.wav" />
+		<Unit filename="resources/textures.bmp" />
+		<Unit filename="resources/title-screen.mp3" />
+		<Unit filename="src/Destroyer/Destroyer.cpp" />
+		<Unit filename="src/Destroyer/WallDestroyer.cpp" />
+		<Unit filename="src/Display/Display.cpp" />
+		<Unit filename="src/Display/DisplayElement.cpp" />
+		<Unit filename="src/Display/DisplayManager.cpp" />
+		<Unit filename="src/Display/ExitDisplay.cpp" />
+		<Unit filename="src/Display/GameDisplay.cpp" />
+		<Unit filename="src/Display/LoadingDisplay.cpp" />
+		<Unit filename="src/Display/MainMenuDisplay.cpp" />
+		<Unit filename="src/Display/PauseDisplay.cpp" />
+		<Unit filename="src/Display/PlayersNumberDisplay.cpp" />
+		<Unit filename="src/Display/WelcomeDisplay.cpp" />
+		<Unit filename="src/Entity/Bomb.cpp" />
+		<Unit filename="src/Entity/DestructibleWall.cpp" />
+		<Unit filename="src/Entity/Enemy.cpp" />
+		<Unit filename="src/Entity/EnemyOne.cpp" />
+		<Unit filename="src/Entity/EnemyThree.cpp" />
+		<Unit filename="src/Entity/EnemyTwo.cpp" />
+		<Unit filename="src/Entity/Explosion.cpp" />
+		<Unit filename="src/Entity/MapObject.cpp" />
+		<Unit filename="src/Entity/PickUp.cpp" />
+		<Unit filename="src/Entity/Player.cpp" />
+		<Unit filename="src/Manager/BombManager.cpp" />
+		<Unit filename="src/Manager/EnemyManager.cpp" />
+		<Unit filename="src/Manager/ExplosionManager.cpp" />
+		<Unit filename="src/Manager/Map.cpp" />
+		<Unit filename="src/Manager/PickUpManager.cpp" />
+		<Unit filename="src/Manager/PlayerManager.cpp" />
+		<Unit filename="src/System/FreeTimer.cpp" />
+		<Unit filename="src/System/KeyboardInput.cpp" />
+		<Unit filename="src/System/SystemTimer.cpp" />
+		<Unit filename="src/System/TextRenderer.cpp" />
+		<Unit filename="src/Utility/Relay.cpp" />
+		<Unit filename="src/Utility/Timer.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project project_number="v0.148" />
+				<doxyfile_build extract_all="1" extract_static="1" />
+				<doxyfile_warnings warn_if_undocumented="1" />
+				<doxyfile_output />
+				<doxyfile_dot have_dot="1" />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
