@@ -6,4 +6,6 @@ Clone of Bomberman game in C++ using SDL2 for the nintendo switch
 	* Aleksandar Miletic / developer
 	* Mirko Brkusanin / developer
 	* KranK / Port to the nintendo switch
-
+	
+## Original Game
+https://github.com/Sandman1705/Bombermaniac
