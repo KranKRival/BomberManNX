@@ -1,6 +1,6 @@
-# BomberManNX - bomberman classic clone for the nintendo switch
+# BomberManNX
 
-Clone of Bomberman game in C++ using SDL2
+Clone of Bomberman game in C++ using SDL2 for the nintendo switch
 
 ## Authors:
 	* Aleksandar Miletic / developer
